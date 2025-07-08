@@ -36,7 +36,7 @@ export default function FeatureSideImage({
                 width={48}
                 height={48}
                 alt="test1"
-                className="object-contain"
+                className="object-contain w-[48px] h-[48px]"
               />
 
               <div className="flex flex-col gap-2 py-2.5">

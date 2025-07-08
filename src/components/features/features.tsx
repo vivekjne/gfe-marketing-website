@@ -99,20 +99,20 @@ export default function FeaturesSection() {
             title: "Faster downloads",
             description:
               "Our robust servers are primed to deliver the highest resolution<br /> images swiftly, ensuring a smooth download experience.",
-            image: "/img/features/side-image-1/1.png",
+            image: "/img/features/side-image-2/1.png",
           },
 
           {
             title: "Convenience for teams",
             description:
               "Your single account can accommodate multiple users simultaneously<br /> downloading without any disruptions, streamlining teamwork and<br /> productivity.",
-            image: "/img/features/side-image-1/2.png",
+            image: "/img/features/side-image-2/2.png",
           },
           {
             title: "Royalty-free licensing",
             description:
               "Our straightforward, royalty-free licensing means your chosen<br /> images are yours to innovate with, without the hassle of negotiating<br /> usage rights for every new project.",
-            image: "/img/features/side-image-1/3.png",
+            image: "/img/features/side-image-2/3.png",
           },
         ]}
       />
