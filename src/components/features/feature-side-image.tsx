@@ -16,7 +16,7 @@ export default function FeatureSideImage({
   flexReverse = false,
 }: FeatureSideImageProps) {
   return (
-    <div className="flex flex-col p-24 gap-16">
+    <div className="flex flex-col px-3 py-12 gap-12 md:p-24 md:gap-16">
       <FeatureHeader
         title={title}
         subtitle={subtitle}
@@ -25,8 +25,8 @@ export default function FeatureSideImage({
 
       <div
         className={`flex ${
-          flexReverse ? "flex-row-reverse" : ""
-        } justify-around items-start gap-x-8`}
+          flexReverse ? "md:flex-row-reverse flex-col-reverse" : ""
+        } justify-around items-start gap-x-8 gap-y-12 flex-col md:flex-row md:gap-y-0`}
       >
         <div className="flex flex-col grow gap-10">
           {items.map((item) => (
@@ -58,7 +58,7 @@ export default function FeatureSideImage({
           width={592}
           height={394}
           alt={title}
-          className="h-[394] object-cover"
+          className="max-w-[592px] object-cover"
         />
       </div>
     </div>

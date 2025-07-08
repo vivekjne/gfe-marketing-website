@@ -37,7 +37,7 @@ const featureItemsData: { heading: string; description: string }[] = [
 export default function FeaturesSection() {
   return (
     <section id="features">
-      <div className="flex flex-col gap-16 p-24">
+      <div className="flex flex-col gap-12 md:gap-16 px-3 py-12 md:px-24 md:py-24">
         <FeatureHeader
           title="Premium abstract images"
           subtitle="Easy access to top quality images"
@@ -47,7 +47,7 @@ export default function FeaturesSection() {
         />
 
         {/* features grid */}
-        <div className="grid grid-cols-3 gap-x-12 gap-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-8">
           {featureItemsData.map((feature, i) => (
             <FeatureItem
               key={feature.heading}
