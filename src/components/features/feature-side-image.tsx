@@ -1,8 +1,8 @@
 import Image from "next/image";
-import FeatureHeader, { FeatureHeaderProps } from "./feature-header";
 import React from "react";
+import SectionHeader, { SectionHeaderProps } from "../ui/section-header";
 
-interface FeatureSideImageProps extends FeatureHeaderProps {
+interface FeatureSideImageProps extends SectionHeaderProps {
   image: string;
   items: { image: string; title: string; description: string }[];
   flexReverse?: boolean;
@@ -17,7 +17,7 @@ export default function FeatureSideImage({
 }: FeatureSideImageProps) {
   return (
     <div className="flex flex-col px-3 py-12 gap-12 md:p-24 md:gap-16">
-      <FeatureHeader
+      <SectionHeader
         title={title}
         subtitle={subtitle}
         description={description}

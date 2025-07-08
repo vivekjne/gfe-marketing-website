@@ -1,4 +1,5 @@
 import FeaturesSection from "@/components/features/features";
+import PricingSection from "@/components/pricing/pricing";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -63,6 +64,8 @@ export default function Home() {
       </section>
 
       <FeaturesSection />
+
+      <PricingSection />
     </>
   );
 }

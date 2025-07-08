@@ -1,15 +1,16 @@
 import React from "react";
 
-export interface FeatureHeaderProps {
+export interface SectionHeaderProps {
   title: string;
   subtitle: string;
   description: string;
 }
-export default function FeatureHeader({
+
+export default function SectionHeader({
   title,
   subtitle,
   description,
-}: FeatureHeaderProps) {
+}: SectionHeaderProps) {
   return (
     <div className="flex flex-col items-center justify-center gap-5">
       <h3 className="font-semibold text-indigo-700">{title}</h3>

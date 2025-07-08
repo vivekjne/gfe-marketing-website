@@ -1,4 +1,4 @@
-import FeatureHeader from "./feature-header";
+import SectionHeader from "../ui/section-header";
 import FeatureSideImage from "./feature-side-image";
 import FeatureItem from "./features-item";
 
@@ -38,7 +38,7 @@ export default function FeaturesSection() {
   return (
     <section id="features">
       <div className="flex flex-col gap-12 md:gap-16 px-3 py-12 md:px-24 md:py-24">
-        <FeatureHeader
+        <SectionHeader
           title="Premium abstract images"
           subtitle="Easy access to top quality images"
           description="In a world where storytelling constantly evolves, we lead with
