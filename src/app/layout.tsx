@@ -30,8 +30,10 @@ export default function RootLayout({
       >
         <div className="flex flex-col bg-gradient-to-b from-gray-50 to-[#d2d6db] min-h-screen">
           <Navbar />
-          <div className="max-w-[1440px] bg-white rounded shadow-md mx-auto w-full mb-8">
-            {children}
+          <div className="p-4 md:p-8">
+            <div className="max-w-[1440px] bg-white rounded shadow-md mx-auto w-full mb-8">
+              {children}
+            </div>
           </div>
         </div>
       </body>
