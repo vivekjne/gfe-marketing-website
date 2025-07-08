@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/ui/layouts/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,6 +10,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const notoSans = Noto_Sans({
+  variable: "--font-noto-sans",
   subsets: ["latin"],
 });
 
@@ -24,10 +30,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${notoSans.variable} antialiased`}>
+        <div className="flex flex-col bg-gradient-to-b from-gray-50 to-[#d2d6db] min-h-screen">
+          <Navbar />
+          <div className="max-w-[1440px] bg-white rounded shadow-md mx-auto w-full">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
