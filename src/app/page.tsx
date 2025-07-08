@@ -1,3 +1,4 @@
+import FeaturesSection from "@/components/features/features";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +8,7 @@ export default function Home() {
       <section id="banner" className="flex items-center justify-center p-24">
         <div className="flex flex-col grow gap-16">
           <div className="flex flex-col gap-6">
-            <h2 className="text-6xl font-semibold">
+            <h2 className="text-6xl font-semibold text-neutral-900">
               Well crafted <br /> abstract images
             </h2>
             <p className="text-xl text-neutral-600">
@@ -41,7 +42,10 @@ export default function Home() {
       </section>
 
       {/* Social proof section */}
-      <section id="social-proof" className="p-y-24">
+      <section id="social-proof" className="p-y-24 flex flex-col gap-y-8">
+        <p className="text-neutral-600 text-center text-base">
+          Used by teams that you love
+        </p>
         <div className="flex overflow-x-auto ">
           {Array.from({ length: 8 }, (_, i) => (
             <Image
@@ -54,6 +58,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <FeaturesSection />
     </>
   );
 }
