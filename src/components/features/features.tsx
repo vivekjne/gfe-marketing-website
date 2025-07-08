@@ -1,3 +1,5 @@
+import FeatureHeader from "./feature-header";
+import FeatureSideImage from "./feature-side-image";
 import FeatureItem from "./features-item";
 
 const featureItemsData: { heading: string; description: string }[] = [
@@ -34,21 +36,15 @@ const featureItemsData: { heading: string; description: string }[] = [
 ];
 export default function FeaturesSection() {
   return (
-    <section id="features" className="p-24">
-      <div className="flex flex-col gap-16">
-        <div className="flex flex-col items-center justify-center gap-5">
-          <h3 className="font-semibold text-indigo-700">
-            Premium abstract images
-          </h3>
-          <p className="text-5xl font-semibold">
-            Easy access to top quality images
-          </p>
-          <p className="text-xl text-neutral-600 text-center">
-            In a world where storytelling constantly evolves, we lead with
+    <section id="features">
+      <div className="flex flex-col gap-16 p-24">
+        <FeatureHeader
+          title="Premium abstract images"
+          subtitle="Easy access to top quality images"
+          description="In a world where storytelling constantly evolves, we lead with
             groundbreaking images <br /> designed for your presentation
-            excellence.
-          </p>
-        </div>
+            excellence."
+        />
 
         {/* features grid */}
         <div className="grid grid-cols-3 gap-x-12 gap-y-8">
@@ -63,6 +59,63 @@ export default function FeaturesSection() {
           ))}
         </div>
       </div>
+
+      <FeatureSideImage
+        title="High quality images"
+        subtitle="For designers, by designers"
+        description="Unleash boundless creativity with a large repository of images optimized for designers"
+        image="/img/features/feature-side-1.png"
+        items={[
+          {
+            title: "5K resolution support",
+            description:
+              "All images boast a minimum resolution of 5K, ensuring crisp, crystal-<br />clear quality.",
+            image: "/img/features/side-image-1/1.png",
+          },
+
+          {
+            title: "From water to glass",
+            description:
+              "We offer a wide array of abstractions, ranging from water to glass,<br /> and encompassing various styles including 3D and vector.",
+            image: "/img/features/side-image-1/2.png",
+          },
+          {
+            title: "Portrait or landscape",
+            description:
+              "Effortlessly adapt your images for any platform - whether it's a<br /> stunning wallpaper or captivating Instagram reels and stories.",
+            image: "/img/features/side-image-1/3.png",
+          },
+        ]}
+      />
+
+      <FeatureSideImage
+        flexReverse
+        title="Best-in-class support"
+        subtitle="Convenience and licensing that empowers"
+        description="In a world where storytelling constantly evolves, <br /> don't let licensing and poor support hold you down."
+        image="/img/features/feature-side-2.png"
+        items={[
+          {
+            title: "Faster downloads",
+            description:
+              "Our robust servers are primed to deliver the highest resolution<br /> images swiftly, ensuring a smooth download experience.",
+            image: "/img/features/side-image-1/1.png",
+          },
+
+          {
+            title: "Convenience for teams",
+            description:
+              "Your single account can accommodate multiple users simultaneously<br /> downloading without any disruptions, streamlining teamwork and<br /> productivity.",
+            image: "/img/features/side-image-1/2.png",
+          },
+          {
+            title: "Royalty-free licensing",
+            description:
+              "Our straightforward, royalty-free licensing means your chosen<br /> images are yours to innovate with, without the hassle of negotiating<br /> usage rights for every new project.",
+            image: "/img/features/side-image-1/3.png",
+          },
+        ]}
+      />
     </section>
   );
 }
