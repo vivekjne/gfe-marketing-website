@@ -58,7 +58,7 @@ export default function FeatureSideImage({
           width={592}
           height={394}
           alt={title}
-          className="max-w-[592px] object-cover"
+          className=" object-cover"
         />
       </div>
     </div>
